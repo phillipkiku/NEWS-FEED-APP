@@ -1,10 +1,11 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+
 function PostPage() {
   const { id } = useParams();
-
   const [post, setPost] = useState(null);
+
   async function fetchPost() {
     let apiUrl = `https://dummyjson.com/posts/${id}`;
     let response = await fetch(apiUrl);
